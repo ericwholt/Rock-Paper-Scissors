@@ -8,6 +8,10 @@ namespace Rock_Paper_Scissors
 {
     class Rocky : Player
     {
+        public Rocky()
+        {
+            Name = "Rocky";
+        }
         public override Roshambo GenerateRoshambo()
         {
             return Roshambo.Rock;

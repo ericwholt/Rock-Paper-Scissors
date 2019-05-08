@@ -10,8 +10,14 @@ namespace Rock_Paper_Scissors
     {
         Random rnd = new Random();
 
+        public Randy()
+        {
+            Name = "Randy";
+        }
+
         public override Roshambo GenerateRoshambo()
         {
+            
             return (Roshambo)rnd.Next(0, 3);
         }
     }

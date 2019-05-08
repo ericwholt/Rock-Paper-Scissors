@@ -19,5 +19,9 @@ namespace Rock_Paper_Scissors
         public Roshambo Roshambo;
 
         public abstract Roshambo GenerateRoshambo();
+
+        public int Wins = 0;
+        public int Losses = 0;
+        public int Draws = 0;
     }
 }
