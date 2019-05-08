@@ -14,14 +14,20 @@ namespace Rock_Paper_Scissors
     }
     abstract class Player
     {
-        public string Name;
 
-        public Roshambo Roshambo;
+        public string Name { get; set; }
+        public Roshambo Roshambo { get; set; }
+        public int Wins { get; set; }
+        public int Losses { get; set; }
+        public int Draws { get; set; }
+
+        public Player()
+        {
+            Wins = 0;
+            Losses = 0;
+            Draws = 0;
+        }
 
         public abstract Roshambo GenerateRoshambo();
-
-        public int Wins = 0;
-        public int Losses = 0;
-        public int Draws = 0;
     }
 }

@@ -16,11 +16,10 @@ namespace Rock_Paper_Scissors
             //User user = new User();
             while (run)
             {
-                Opponent = SelectOpponent(rocky, randy);
+                Opponent = SelectOpponent(rocky, randy);//Challenge opponent
                 user.Roshambo = user.GenerateRoshambo();//Get users rock, paper scissors choice
                 Opponent.Roshambo = Opponent.GenerateRoshambo();//Get current opponents rock, paper, scissors choice
                 PrintResults();//Print results of Roshambo Battle
-
                 run = Validator.GetYesOrNoFromUser("Play again");
             }
             PrintSessionResults();

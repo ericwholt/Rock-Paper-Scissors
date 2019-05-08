@@ -10,21 +10,19 @@ namespace Rock_Paper_Scissors
     {
         public User()
         {
-            SetUserName();
+            Name = Validator.GetUserName();
         }
+
         public override Roshambo GenerateRoshambo()
         {
-           return GetChoiceFromUser("Choose (R)ock (P)aper (S)cissor: ", 0, 2);
+           return GetRPSFromUser();
         }
 
-        private void SetUserName()
+        public Roshambo GetRPSFromUser()
         {
-            this.Name = Validator.GetUserName();
-        }
-
-        //TODO: move to validator class
-        public Roshambo GetChoiceFromUser(string message, int min, int max)
-        {
+            string message = "Choose (R)ock (P)aper (S)cissor: ";
+            int min = 0;
+            int max = 2;
             Console.Write(message);
             try
             {
@@ -52,7 +50,7 @@ namespace Rock_Paper_Scissors
             {
 
                 Console.WriteLine(e.Message);
-                return GetChoiceFromUser(message, min, max);
+                return GetRPSFromUser();
             }
         }
     }
